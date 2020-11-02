@@ -1,0 +1,404 @@
+  [1m[35m (620.0ms)[0m  [1m[35mCREATE DATABASE "first_routes_and_controllers_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (233.8ms)[0m  [1m[35mCREATE DATABASE "first_routes_and_controllers_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-10-28 14:46:08 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/camerontanjoco/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/camerontanjoco/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (7.5ms)
+Completed 200 OK in 47ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-28 14:46:22 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/camerontanjoco/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/camerontanjoco/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (25.0ms)
+Completed 200 OK in 179ms (Views: 62.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-28 14:54:15 -0700
+Processing by Rails::WelcomeController#index as */*
+  Rendering /Users/camerontanjoco/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/camerontanjoco/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (50.7ms)
+Completed 200 OK in 1335ms (Views: 480.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-10-28 14:54:45 -0700
+
+AbstractController::ActionNotFound - The action 'index' could not be found for UsersController:
+
+Started GET "/users" for ::1 at 2020-10-28 14:56:26 -0700
+Processing by UsersController#index as */*
+No template found for UsersController#index, rendering head :no_content
+Completed 204 No Content in 3547ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-10-28 15:01:23 -0700
+Processing by UsersController#index as */*
+  Rendering text template
+  Rendered text template (0.1ms)
+Completed 200 OK in 208ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-10-28 15:01:37 -0700
+Processing by UsersController#index as */*
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-10-28 15:02:03 -0700
+Processing by UsersController#index as */*
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 7ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-10-28 15:03:44 -0700
+Processing by UsersController#index as */*
+Completed 200 OK in 29ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?favorite_game=cyberpunk2077" for ::1 at 2020-10-28 15:10:14 -0700
+Processing by UsersController#index as */*
+  Parameters: {"favorite_game"=>"cyberpunk2077"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/12" for ::1 at 2020-10-28 15:10:55 -0700
+
+AbstractController::ActionNotFound - The action 'show' could not be found for UsersController:
+
+Started POST "/users" for ::1 at 2020-10-28 15:13:23 -0700
+
+AbstractController::ActionNotFound - The action 'create' could not be found for UsersController:
+
+Started POST "/users?favorite_game=cyberpunk2077" for ::1 at 2020-10-28 15:20:15 -0700
+Processing by UsersController#create as */*
+  Parameters: {"favorite_game"=>"cyberpunk2077"}
+Completed 200 OK in 20ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/2" for ::1 at 2020-10-28 15:20:47 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/users/2"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/12" for ::1 at 2020-10-28 15:21:54 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"12"}
+No template found for UsersController#show, rendering head :no_content
+Completed 204 No Content in 2315ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/12" for ::1 at 2020-10-28 15:24:05 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"12"}
+Completed 200 OK in 37ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/12" for ::1 at 2020-10-28 15:28:32 -0700
+Processing by UsersController#show as */*
+  Parameters: {"games"=>{"fun"=>"cyberpunk 2077", "not_fun"=>"League of Legends", "my_games"=>{"last_purchase"=>"Call of Duty: Modern Warfare"}}, "dogs_name"=>"Spike", "id"=>"12"}
+Completed 200 OK in 40ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/2?try=hard&some=val&some[inner][test]=%27I%27m%20here%27" for ::1 at 2020-10-28 15:30:35 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/users/2"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users?try=hard&some=val&some[inner][test]=%27I%27m%20here%27" for ::1 at 2020-10-28 15:31:30 -0700
+
+ActionController::BadRequest - Invalid query parameters: expected Hash (got String) for param `some':
+
+Started POST "/users?try=hard" for ::1 at 2020-10-28 15:32:09 -0700
+Processing by UsersController#create as */*
+  Parameters: {"try"=>"hard"}
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?try=hard&some[test]=testing&some[test][mango]=hungry%20mangoes" for ::1 at 2020-10-28 15:32:56 -0700
+
+ActionController::BadRequest - Invalid query parameters: expected Hash (got String) for param `test':
+
+Started POST "/users?try=hard&some[test]=testing&some[mango][a_key]=hungry%20mangoes" for ::1 at 2020-10-28 15:33:51 -0700
+Processing by UsersController#create as */*
+  Parameters: {"try"=>"hard", "some"=>{"test"=>"testing", "mango"=>{"a_key"=>"hungry mangoes"}}}
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (132.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (15.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (12.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2711202859307440470)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20201028223923)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (25.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" text NOT NULL, "email" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20201028223923_create_users.rb:3
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_name" ON "users"  ("name")[0m
+  ↳ db/migrate/20201028223923_create_users.rb:9
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20201028223923_create_users.rb:10
+  [1m[36mActiveRecord::SchemaMigration Create (13.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201028223923"]]
+  ↳ bin/rails:9
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (6.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-28 23:06:47.220915"], ["updated_at", "2020-10-28 23:06:47.220915"]]
+  ↳ bin/rails:9
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2711202859307440470)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (12.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Niko Wells"], ["email", "niko@well.com"], ["created_at", "2020-10-28 23:13:22.274567"], ["updated_at", "2020-10-28 23:13:22.274567"]]
+  [1m[35m (13.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/users" for ::1 at 2020-10-28 16:14:18 -0700
+  [1m[35m (9.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/camerontanjoco/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as */*
+  Rendering text template
+  Rendered text template (0.2ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-10-28 16:15:40 -0700
+Processing by UsersController#index as */*
+Completed 200 OK in 21ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-10-28 16:17:59 -0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (42.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 435ms (Views: 289.0ms | ActiveRecord: 94.4ms)
+
+
+  [1m[35m (22.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (43.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Cameron Tanjoco"], ["email", "cameron@tanjoco.com"], ["created_at", "2020-10-28 23:19:48.048749"], ["updated_at", "2020-10-28 23:19:48.048749"]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users" for ::1 at 2020-10-28 16:20:05 -0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (97.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 494ms (Views: 112.1ms | ActiveRecord: 317.6ms)
+
+
+Started GET "/users/1" for ::1 at 2020-10-28 16:20:17 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 9ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-10-28 16:22:07 -0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (12.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 206ms (Views: 76.7ms | ActiveRecord: 56.9ms)
+
+
+Started GET "/users/1" for ::1 at 2020-10-28 16:22:21 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 5169ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `user' for #<UsersController:0x00007fd3769e97f0>:
+  app/controllers/users_controller.rb:9:in `show'
+
+Started GET "/users/1" for ::1 at 2020-10-28 16:24:40 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (22.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+Completed 200 OK in 598ms (Views: 25.3ms | ActiveRecord: 248.6ms)
+
+
+Started GET "/users/2" for ::1 at 2020-10-28 16:24:50 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+Completed 200 OK in 8ms (Views: 0.5ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users?name=Stephen%20Curry&email=stephen@curry.com" for ::1 at 2020-10-28 16:27:18 -0700
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Stephen Curry", "email"=>"stephen@curry.com"}
+Completed 400 Bad Request in 33ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:13:in `create'
+
+Started POST "/users?name=Stephen%20Curry&email=stephen@curry.com" for ::1 at 2020-10-28 16:30:15 -0700
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Stephen Curry", "email"=>"stephen@curry.com"}
+Completed 400 Bad Request in 27ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:13:in `create'
+
+Started POST "/users?user[name]=Stephen%20Curry&user[email]=stephen@curry.com" for ::1 at 2020-10-28 16:32:04 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"Stephen Curry", "email"=>"stephen@curry.com"}}
+  [1m[35m (6.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mUser Create (99.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Stephen Curry"], ["email", "stephen@curry.com"], ["created_at", "2020-10-28 23:32:04.958833"], ["updated_at", "2020-10-28 23:32:04.958833"]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (11.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14
+Completed 200 OK in 694ms (Views: 6.8ms | ActiveRecord: 179.8ms)
+
+
+Started GET "/users" for ::1 at 2020-10-28 16:32:23 -0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 10ms (Views: 5.2ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/users?user[name]=Klay%20Thompson&user[email]=" for ::1 at 2020-10-28 16:34:58 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"Klay Thompson", "email"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mUser Create (13.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Klay Thompson"], ["email", ""], ["created_at", "2020-10-28 23:34:59.540640"], ["updated_at", "2020-10-28 23:34:59.540640"]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14
+Completed 200 OK in 222ms (Views: 2.1ms | ActiveRecord: 72.5ms)
+
+
+Started POST "/users?user[name]=Draymond%20Green" for ::1 at 2020-10-28 16:35:23 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"Draymond Green"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mUser Create (44.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Draymond Green"], ["created_at", "2020-10-28 23:35:23.402338"], ["updated_at", "2020-10-28 23:35:23.402338"]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (3.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:14
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 47.5ms)
+
+
+
+ActiveRecord::NotNullViolation - PG::NotNullViolation: ERROR:  null value in column "email" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (5, Draymond Green, null, 2020-10-28 23:35:23.402338, 2020-10-28 23:35:23.402338).
+: INSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id":
+  app/controllers/users_controller.rb:14:in `create'
+
+Started GET "/users" for ::1 at 2020-10-28 16:36:53 -0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 52ms (Views: 33.5ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/users?user[name]=Draymond%20Green" for ::1 at 2020-10-28 16:37:22 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"Draymond Green"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mUser Create (40.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Draymond Green"], ["created_at", "2020-10-28 23:37:23.097853"], ["updated_at", "2020-10-28 23:37:23.097853"]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:14
+Completed 500 Internal Server Error in 253ms (ActiveRecord: 77.3ms)
+
+
+
+ActiveRecord::NotNullViolation - PG::NotNullViolation: ERROR:  null value in column "email" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (6, Draymond Green, null, 2020-10-28 23:37:23.097853, 2020-10-28 23:37:23.097853).
+: INSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id":
+  app/controllers/users_controller.rb:14:in `create'
+
+Started POST "/users?user[name]=Draymond%20Green&user[email]=" for ::1 at 2020-10-28 16:44:23 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"Draymond Green", "email"=>""}}
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (10.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:14
+Completed 422 Unprocessable Entity in 563ms (Views: 3.9ms | ActiveRecord: 177.6ms)
+
+
+Started POST "/users?user[name]=Andre%20Igoudala&user[email]=" for ::1 at 2020-10-28 16:52:02 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"Andre Igoudala", "email"=>""}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:14
+Completed 422 Unprocessable Entity in 141ms (Views: 10.5ms | ActiveRecord: 35.9ms)
+
+

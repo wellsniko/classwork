@@ -1,0 +1,26 @@
+/* PHASE 5: Cats */
+/* PHASE 5: Cats */
+
+.content-header {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  background: url("/Users/nikowells/Documents/aa_classwork/w6d4/css_friends/images/cats.jpg");
+  background-size: cover;
+  border-bottom: 1px solid #ccc;
+}
+
+.content-header > h1 {
+  position: absolute;
+  bottom: 20px;
+  left: 240px;
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 300;
+  color: #fff;
+  text-shadow: #000 0 0 10px;
+}
+
+.content-header-add-friend:hover {
+  background: #eee;
+}
