@@ -1,0 +1,19 @@
+
+.sections-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 7px;
+    width: 80%;
+}
+
+.sections-header {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid $light-gray;
+}
+
+.sections-nav li:hover {
+    background-color: $lightest-gray;
+    text-decoration: underline;
+}
