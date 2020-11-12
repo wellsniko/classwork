@@ -19,3 +19,70 @@
     <% end %>
     <input type="submit" value="Post">
 </form>
+
+
+<label for="dropdown">A</label>
+<select name="user[a]" id="dropdown">
+  <option></option>
+  <% as.each do |a| %>
+    <option
+      <%= user.a == a ? "selected" : "" %>
+      value="<%= a %>">
+      <%= a.upcase %>
+    </option>
+  <% end %>
+</select>
+
+
+
+
+<form action="<%= edited_obj_sing_url(@edited_obj_sing) %>" method="POST">
+    <input type="hidden" name="_method" value="PATCH">
+
+    <label>attribute1:
+        <input type="text" name="edited_obj_sing[attribute1]" value="<%= @edited_obj_sing.attribute1 %>">
+    </label>
+
+    <label>attribute2:
+        <input type="text" name="edited_obj_sing[attribute2]" value="<%= @edited_obj_sing.attribute2 %>">
+    </label>
+
+    <input type="submit" value="Edit">
+</form>
+
+
+<h1>Sign In</h1>
+
+<form action="<%= session_url %>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <label>Username
+        <input type="text" name="user[username]" value="">
+    </label>
+    <label>Password
+        <input type="password" name="user[password]" value="">
+    </label>
+    <input type="submit" value="Sign In">
+</form>
+
+<body>
+<% if logged_in? %>
+<h2>Welcome, <%= current_user.usna %>!</h2><%#need?%>
+  <form action="<%= session_url %>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Sign Out">
+  </form>
+  <a href="<%= edit_user_url(@user) %>">Edit this User</a>
+<% else %>
+  <a href="<%= new_user_url %>">Sign Up</a> <%#need?%>
+  <a href="<%= new_session_url %>">Sign In</a><%#need?%>
+<% end %>
+
+<% if flash[:errors] %>
+    <% flash[:errors].each do |error| %>
+        <%= error %>
+        <br>
+    <% end %>
+<% end  %>
+<%= yield %> <%#no yield? body?%>
+</body>
