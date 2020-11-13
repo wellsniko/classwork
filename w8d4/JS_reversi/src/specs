@@ -1,0 +1,53 @@
+Piece
+#color
+should have the color assigned to it
+#flip
+should switch colors when flipped
+#toString
+should return a letter representing the color
+
+Board
+#grid
+should be 8x8
+should begin with 4 pieces in the center
+should start out empty except for the 4 center pieces
+#isValidPos
+should return false when x or y is less than 0
+should return false when x or y is greater than 7
+should return true otherwise
+#getPiece
+should return a piece for an occupied position
+should return undefined for an empty position
+should throw an error for an invalid position
+#isMine
+should return true when the retrieved piece matches the color
+should return false when retrieved piece does not match
+should return falsey when retrieved piece is undefined
+#isOccupied
+should return true if there is a piece on a position
+should return false if there isn't a piece on a position
+#_positionsToFlip
+returns empty array when pos is not on the board
+returns empty array when there is a blank space one position away from the current position
+returns empty array if no pieces of the opposite color are found
+returns positions for longer horizontal and vertical cases
+returns positions for longer diagonal cases
+#validMove
+should return false for an occupied position
+should return false for a move that does not capture
+should return true for a valid move
+#placePiece
+should allow a player to make a valid move
+should flip captured pieces
+should not allow a piece on top of another piece
+should not allow a move that doesn't capture
+should not allow moves that isolate pieces
+#validMoves
+should return an empty array when there are no valid moves
+should return an array of valid moves when some are left
+#hasMove
+should return true when a color has one or more moves
+should return false when a color has no more moves
+#isOver
+should return false at the start
+should return true when there are no more moves
