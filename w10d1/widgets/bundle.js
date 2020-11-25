@@ -160,7 +160,7 @@ var Root = /*#__PURE__*/function (_React$Component) {
       }];
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_clock__WEBPACK_IMPORTED_MODULE_1__.default, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tabs__WEBPACK_IMPORTED_MODULE_2__.default, {
         panes: tabViews
-      })));
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_weather__WEBPACK_IMPORTED_MODULE_3__.default, null)));
     }
   }]);
 
@@ -315,24 +315,40 @@ var Weather = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, Weather);
 
     _this = _super.call(this, props);
-    _this.state = {};
+    _this.state = {
+      weather: 0
+    }; // this.pollWeather = this.pollWeather.bind(this);
+
     return _this;
   }
 
   _createClass(Weather, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.location = navigator.geolocation.getCurrentPosition();
-      this.getWeather(this.location);
+      // this.location = navigator.geolocation.getCurrentPosition()
+      // this.getWeather(this.location);
+      // this.location = Geolocation.getCurrentPosition(this)
+      // console.log(this.location)
+      // this.pollWeather(this.location)
+      this.pollWeather = this.pollWeather.bind(this);
+      console.log(this.poll);
     }
   }, {
-    key: "getWeather",
-    value: function getWeather(location) {
-      var uri = []; //http://.......
-    } // render() {
-    //     <h2>{this.props.location}</h2>
-    // }
+    key: "pollWeather",
+    value: function pollWeather(location) {
+      var url = 'http://api.openweathermap.org/data/2.5/weather?';
+      var params = {
+        lat: location.coords.latitude,
+        lon: location.coords.longitude
+      }; // url += toQueryString(params);
 
+      var apiKey = 'f816d7f39052e3a98b21952097a43076'; // let uri = `api.openweathermap.org/data/2.5/weather?lat=40&lon=25&appid=ec6bdb291666e651669c60894a240c75`
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "hi");
+    }
   }]);
 
   return Weather;

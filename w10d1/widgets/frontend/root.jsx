@@ -26,9 +26,9 @@ export default class Root extends React.Component {
                 <div>
                     <Tabs panes={tabViews}/>
                 </div>
-                {/* <div>
+                <div>
                     <Weather/>
-                </div> */}
+                </div>
             </div>
         )
     }
