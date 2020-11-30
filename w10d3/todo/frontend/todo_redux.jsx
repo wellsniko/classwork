@@ -23,6 +23,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
 });
 
 
+
+
 // const newTodos = [{ id: 1, ...etc }, { id: 2, ...etc }, ...etc];
 // store.getState(); // should return default state object
 // store.dispatch(receiveTodo({ id: 1, title: "New Todo" }));
