@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 import {receiveAllPokemon, requestAllPokemon} from './actions/pokemon_actions'
 import {fetchAllPokemon} from './util/api_util'
 import configureStore from './store/store'
-
+import {selectAllPokemon } from './reducers/selectors'
+import Root from './components/root'
 
 document.addEventListener('DOMContentLoaded', () => {  
     const store = configureStore();
     //test
+    window.selectAllPokemon  = selectAllPokemon ;
     window.store = store;
     window.getState = store.getState;
     window.dispatch = store.dispatch;
@@ -15,14 +17,5 @@ document.addEventListener('DOMContentLoaded', () => {
     window.receiveAllPokemon = receiveAllPokemon;
     window.fetchAllPokemon = fetchAllPokemon;
     const rootEl = document.getElementById('root');
-    ReactDOM.render(<h1>Pokedex</h1>, rootEl);
+    ReactDOM.render(<Root store={store}/>, rootEl);
 });
-
-
-
-// getState(); // should return initial app state
-
-// const getSuccess = pokemon => dispatch(receiveAllPokemon(pokemon));
-// fetchAllPokemon().then(getSuccess);
-
-// getState(); // should return the app state populated with pokemon
